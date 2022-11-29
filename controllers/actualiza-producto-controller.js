@@ -11,7 +11,7 @@ const inputDescripcion = document.querySelector("[data-descripcion]");
 
 productoServices.listarUnProduto(id).then((datos) => {
   inputImageUrl.setAttribute("src", datos.imageUrl);
-  inputImageUrl.value = datos.imageUrl;
+  
   inputNombre.value = datos.name;
   inputPrecio.value = datos.price;
   inputDescripcion.value = datos.description;
@@ -25,7 +25,7 @@ formulario.addEventListener("submit", (evento) => {
   productoServices
     .alteraProduto(
       id,
-      inputImageUrl.value,
+      
       inputNombre.value,
       inputPrecio.value,
       inputDescripcion.value

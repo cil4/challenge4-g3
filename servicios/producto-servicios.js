@@ -32,7 +32,7 @@ const creaProdutos = (name, imageUrl, price) => {
 
 // PUT/PATCH
 const alteraProduto = async (id, name, price, description) => {
-  return fetch(`https://challenge4.onrender.com/${id}`, {
+  return fetch(`https://challenge4.onrender.com/produto/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -51,7 +51,7 @@ const alteraProduto = async (id, name, price, description) => {
 
 // DELETE
 const deleteProducto = async (id) => {
-  return await fetch(`https://challenge4.onrender.com/${id}`, {
+  return await fetch(`https://challenge4.onrender.com/produto/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",

@@ -33,7 +33,7 @@ const creaProdutos = (name, imageUrl, price) => {
 // PUT/PATCH
 const alteraProduto = async (id, name, price, description) => {
   return fetch(`https://challenge4.onrender.com/producto/${id}`, {
-    method: "PATCH",
+    method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },

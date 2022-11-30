@@ -31,13 +31,14 @@ const creaProdutos = (name, imageUrl, price) => {
 };
 
 // PUT/PATCH
-const alteraProduto = async (id, name, price, description) => {
+const alteraProduto = async (id,imageUrl, name, price, description) => {
   return fetch(`https://challenge4.onrender.com/producto/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
+      imageUrl,
       name,
       price,
       description

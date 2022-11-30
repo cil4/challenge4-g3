@@ -1,6 +1,6 @@
 export const formatPrice = (num) => {
-  return new Intl.NumberFormat("pt-BR", {
+  return new Intl.NumberFormat("es-AR", {
     style: "currency",
-    currency: "BRL",
+    currency: "ARS",
   }).format(num);
 };

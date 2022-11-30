@@ -1,3 +1,5 @@
+import { loginService } from "../servicios/usuario-servicio.js";
+
 const form = document.querySelector("[data-form]");
 
 form.addEventListener("submit", (evento) => {
@@ -5,9 +7,10 @@ form.addEventListener("submit", (evento) => {
   const email = document.querySelector("[data-email]").value;
   const password = document.querySelector("[data-password]").value;
 
-  if (email.length > 5 && password.length > 5) {
+  
+  if ((email.length > 5 && email.value===loginService.login.email.value )&& (password.length > 5) && password.value===loginService.login.password.value) {
     window.location.href = "../screens/produto.html";
   } else {
-    alert("Por favor, insira mais de 5 caracteres no email e senha.");
+    alert("Ingrese más de 5 caracteres en el email y la contraseña.");
   }
 });

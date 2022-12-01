@@ -32,7 +32,7 @@ const getConsolas = (name, price, imageUrl, id) => {
   return card;
 };
 
-const consolas = document.querySelector("[data-consola]");
+const consolas = document.querySelector("[data-allProducts]");
 
 consolas.addEventListener("click", async (evento) => {
   let deleteButton = evento.target.className === "deleteImage";

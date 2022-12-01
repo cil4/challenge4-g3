@@ -17,7 +17,7 @@ const nuevaConsola = (name, price, imageUrl, id) => {
   return card;
 };
 
-const consolas = document.querySelector("[data-product]");
+const consolas = document.querySelector("[data-consola]");
 
 const render = async () => {
   try {

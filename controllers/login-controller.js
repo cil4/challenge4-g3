@@ -8,7 +8,7 @@ form.addEventListener("submit", (evento) => {
   const password = document.querySelector("[data-password]").value;
 
   
-  if ((email.length > 5 && email.value===loginService.login.email.value )&& (password.length > 5) && password.value===loginService.login.password.value) {
+  if ((email.length > 5 && email===loginService.login.email )&& (password.length > 5) && password===loginService.login.password) {
     window.location.href = "../screens/produto.html";
   } else {
     alert("Ingrese más de 5 caracteres en el email y la contraseña.");

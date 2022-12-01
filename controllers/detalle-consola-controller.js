@@ -12,7 +12,7 @@ const inputDescripcion = document.querySelector("[data-descripcion]");
 
 consolaServices.listarUnaConsola(id).then((datos) => {
   inputImageUrl.setAttribute("src", datos.imageUrl);
- inputImageUrl.value = datos.imageUrl;
+ /*inputImageUrl.value = datos.imageUrl;*/
   inputNombre.value = datos.name;
   inputPrecio.value = datos.price;
   inputDescripcion.value = datos.description;

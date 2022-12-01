@@ -35,8 +35,13 @@
 
 .produto {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 32px;
+ /* flex-direction: column;
+  margin-bottom: 32px; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
 } 
 
 .preco {

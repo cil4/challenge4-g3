@@ -49,11 +49,14 @@
 
   .sessao-produtos {
 	height: 100%;
-	padding: 0px 150px 0px 150px;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	gap: 10px;
+padding: 0px 150px 0px 150px;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+gap: 5px;
+flex-direction: row;
+align-content: flex-start;
+align-items: flex-start;
   }
 
   .prod-titulo {

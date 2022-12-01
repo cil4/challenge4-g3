@@ -10,7 +10,7 @@ form.addEventListener("submit", (evento) => {
 
   let valid = false;
 
-loginService.login()
+loginService.loginUsuario()
     .then((data) => {
         data.forEach((user) => {
             if(email === user.email && password === user.password) {

@@ -34,7 +34,7 @@ const getConsolas = (name, price, imageUrl, id) => {
 
 const consolas = document.querySelector("[data-allProducts]");
 
-productos.addEventListener("click", async (evento) => {
+consolas.addEventListener("click", async (evento) => {
   let deleteButton = evento.target.className === "deleteImage";
   if (deleteButton) {
     const consola = evento.target.closest("[data-id]");
@@ -54,7 +54,7 @@ const render = async () => {
     const listaConsolas = await consolaServices.listaConsolas();
 
     listaConsolas.forEach((consola) => {
-      productos.appendChild(
+      consolas.appendChild(
         getConsolas(
           consola.name,
           consola.price,

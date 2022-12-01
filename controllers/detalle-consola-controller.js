@@ -1,43 +1,23 @@
 import { consolaServices } from "../servicios/consola-servicios.js";
-import { formatPrice } from "../formatterPrices.js";
 
 
-const getDetalleConsola = (name, price, imageUrl, id) => {
-    const card = document.createElement("div");
-  
-    const contenido = `
-      <div class="produts__details" id=${id}>
-      
-          
-          <img src="${imageUrl}" alt="img">
-          <h1 class="product-name"> ${name} </h1>
-          <p class="preco">${formatPrice(price)}</p>
-      </div>
-      `;
-    card.innerHTML = contenido;
-    card.dataset.id = id;
-    return card;
-  };
+const getURL = new URL(window.location);
 
-  const consola = document.querySelector("[data-detalleConsola"); 
+const id = getURL.searchParams.get("id");
 
- const render = async () => {
-    try {
-      const detalleConsola = await consolaServices.listarUnaConsola(id);
-  
-      detalleConsola = (producto) => {
-        consola.appendChild(
-          getDetalleConsola(
-            producto.name,
-            producto.price,
-            producto.imageUrl,
-            producto.id
-          )
-        );
-      };
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  
-  render();
+const inputImageUrl = document.querySelector("[data-url]");
+const inputNombre = document.querySelector("[data-nombre]");
+const inputPrecio = document.querySelector("[data-precio]");
+const inputDescripcion = document.querySelector("[data-descripcion]");
+
+consolaServices.listarUnaConsola(id).then((datos) => {
+  inputImageUrl.setAttribute("src", datos.imageUrl);
+ inputImageUrl.value = datos.imageUrl;
+  inputNombre.value = datos.name;
+  inputPrecio.value = datos.price;
+  inputDescripcion.value = datos.description;
+});
+
+
+
+

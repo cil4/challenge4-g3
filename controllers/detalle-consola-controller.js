@@ -23,7 +23,7 @@ const getDetalleConsola = (name, price, imageUrl, id) => {
 
  const render = async () => {
     try {
-      const detalleConsola = await consolaServices.listarUnaConsola();
+      const detalleConsola = await consolaServices.listarUnaConsola(id);
   
       detalleConsola = (producto) => {
         consola.appendChild(

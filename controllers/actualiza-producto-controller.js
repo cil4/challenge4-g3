@@ -11,8 +11,8 @@ const inputDescripcion = document.querySelector("[data-descripcion]");
 
 productoServices.listarUnProduto(id).then((datos) => {
   inputImageUrl.setAttribute("src", datos.imageUrl);
-  inputNombre.getAttribute(datos.name);
- inputImageUrl.value = datos.imageUrl;
+ inputNombre.setAttribute(datos.name);
+ /*inputImageUrl.value = datos.imageUrl;*/
   inputNombre.value = datos.name;
   inputPrecio.value = datos.price;
   inputDescripcion.value = datos.description;

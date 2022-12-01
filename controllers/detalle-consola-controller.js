@@ -25,7 +25,7 @@ const getDetalleConsola = (name, price, imageUrl, id) => {
     try {
       const detalleConsola = await consolaServices.listarUnaConsola();
   
-      detalleConsola.forEach((producto) => {
+      detalleConsola = (producto) => {
         consola.appendChild(
           getDetalleConsola(
             producto.name,
@@ -34,7 +34,7 @@ const getDetalleConsola = (name, price, imageUrl, id) => {
             producto.id
           )
         );
-      });
+      };
     } catch (err) {
       console.log(err);
     }

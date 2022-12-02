@@ -1,4 +1,4 @@
-import { diversoServices } from "../servicios/diverso-servicios";
+import { diversoServices } from "../servicios/diverso-servicios.js";
 
 const getURL = new URL(window.location);
 

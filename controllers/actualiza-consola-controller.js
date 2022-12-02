@@ -1,4 +1,4 @@
-import { consolaServices } from "../servicios/consola-servicios";
+import { consolaServices } from "../servicios/consola-servicios.js";
 
 const getURL = new URL(window.location);
 

@@ -8,7 +8,7 @@ const nuevaConsola = (name, price, imageUrl, id) => {
             <img src="${imageUrl}" alt="img">
             <h1 class="product-name"> ${name} </h1>
             <p class="preco">${formatPrice(price)}</p>
-            <a class="ver-produto" href="./screens/detalle-producto.html?id=${id}">Ver Producto</a>
+            <a class="ver-produto" href="./screens/detalle-consola.html?id=${id}">Ver Producto</a>
         </div>   
     `;
   card.innerHTML = contenido;

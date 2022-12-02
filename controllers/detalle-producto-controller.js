@@ -1,4 +1,4 @@
-import { productoServices } from "../servicios/producto-servicios";
+import { productoServices } from "../servicios/producto-servicios.js";
 
 
 const getURL = new URL(window.location);

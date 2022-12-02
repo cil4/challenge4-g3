@@ -33,7 +33,7 @@ const creaDiverso = (name, imageUrl, price) => {
 // PUT/PATCH
 const alteraDiverso = async (id,imageUrl, name, price, description) => {
   return fetch(`https://challenge4.onrender.com/diversos/${id}`, {
-    method: "PUT",
+    method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },

@@ -1,13 +1,13 @@
 import { diversoServices } from "../servicios/diverso-servicios.js";
 
-const form = document.querySelector("[data-form]");
+const form = document.querySelector("[data-formDiverso]");
 
 form.addEventListener("submit", (evento) => {
   evento.preventDefault();
 
-  const nome = document.querySelector("[data-nome]").value;
-  const url = document.querySelector("[data-url]").value;
-  const preco = document.querySelector("[data-preco]").value;
+  const nome = document.querySelector("[data-nomeDiverso]").value;
+  const url = document.querySelector("[data-urlDiverso]").value;
+  const preco = document.querySelector("[data-precoDiverso]").value;
   const categ = document.querySelector("[data-diverso]").value;
 
   diversoServices.creaDiverso(nome, url, preco,categ)

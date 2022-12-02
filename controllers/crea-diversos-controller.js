@@ -8,8 +8,9 @@ form.addEventListener("submit", (evento) => {
   const nome = document.querySelector("[data-nome]").value;
   const url = document.querySelector("[data-url]").value;
   const preco = document.querySelector("[data-preco]").value;
+  const categ = document.querySelector("[data-diverso]").value;
 
-  diversoServices.creaDiverso(nome, url, preco)
+  diversoServices.creaDiverso(nome, url, preco,categ)
     .then((resposta) => {
       window.location.href = "../screens/produto.html";
       console.log(resposta);

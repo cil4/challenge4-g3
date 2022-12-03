@@ -12,7 +12,7 @@ form.addEventListener("submit", (evento) => {
 
   consolaServices.creaConsolas(nome, url, preco,categ)
     .then((resposta) => {
-      window.location.href = "../screens/produto.html";
+      window.location.href = "../index.html";
       console.log(resposta);
     })
     .catch((err) => {

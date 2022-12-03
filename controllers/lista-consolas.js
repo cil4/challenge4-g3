@@ -33,6 +33,7 @@ const getConsolas = (name, price, imageUrl, id) => {
   card.dataset.id = id;
   return card;
 };
+
 const getProducts = (name, price, imageUrl, id) => {
   const card = document.createElement("div");
 
@@ -61,6 +62,7 @@ const getProducts = (name, price, imageUrl, id) => {
   card.dataset.id = id;
   return card;
 };
+
 const getDiversos = (name, price, imageUrl, id) => {
   const card = document.createElement("div");
 

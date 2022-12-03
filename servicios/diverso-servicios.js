@@ -52,7 +52,7 @@ const alteraDiverso = async (id,imageUrl, name, price, description) => {
 
 // DELETE
 const deleteDiverso = async (id) => {
-  return await fetch(`https://challenge4.onrender.com/consolas/${id}`, {
+  return await fetch(`https://challenge4.onrender.com/diversos/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",

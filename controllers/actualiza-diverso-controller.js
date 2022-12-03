@@ -4,10 +4,10 @@ const getURL = new URL(window.location);
 
 const id = getURL.searchParams.get("id");
 
-const inputImageUrl = document.querySelector("[data-url]");
-const inputNombre = document.querySelector("[data-nombre]");
-const inputPrecio = document.querySelector("[data-precio]");
-const inputDescripcion = document.querySelector("[data-descripcion]");
+const inputImageUrl = document.querySelector("[data-urlDiverso]");
+const inputNombre = document.querySelector("[data-nombreDiverso]");
+const inputPrecio = document.querySelector("[data-precioDiverso]");
+const inputDescripcion = document.querySelector("[data-descripcionDiverso]");
 
 diversoServices.listarDiverso(id).then((datos) => {
   inputImageUrl.setAttribute("src", datos.imageUrl);

@@ -5,9 +5,9 @@ const form = document.querySelector("[data-formConsola]");
 form.addEventListener("submit", (evento) => {
   evento.preventDefault();
 
-  const nome = document.querySelector("[data-nomeConsola]").value;
+  const nome = document.querySelector("[data-nombreConsola]").value;
   const url = document.querySelector("[data-urlConsola]").value;
-  const preco = document.querySelector("[data-precoConsola]").value;
+  const preco = document.querySelector("[data-precioConsola]").value;
   const categ = document.querySelector("[data-consola]").value;
 
   consolaServices.creaConsolas(nome, url, preco,categ)

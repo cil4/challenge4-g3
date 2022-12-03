@@ -5,10 +5,10 @@ const getURL = new URL(window.location);
 
 const id = getURL.searchParams.get("id");
 
-const inputImageUrl = document.querySelector("[data-url]");
-const inputNombre = document.querySelector("[data-nombre]");
-const inputPrecio = document.querySelector("[data-precio]");
-const inputDescripcion = document.querySelector("[data-descripcion]");
+const inputImageUrl = document.querySelector("[data-urlConsola]");
+const inputNombre = document.querySelector("[data-nombreConsola]");
+const inputPrecio = document.querySelector("[data-precioConsola]");
+const inputDescripcion = document.querySelector("[data-descripcionConsola]");
 
 consolaServices.listarUnaConsola(id).then((datos) => {
   inputImageUrl.setAttribute("src", datos.imageUrl);

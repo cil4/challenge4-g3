@@ -17,7 +17,7 @@ consolaServices.listarUnaConsola(id).then((datos) => {
   inputDescripcion.value = datos.description;
 });
 
-const formulario = document.querySelector("[data-form]");
+const formulario = document.querySelector("[data-formConsola]");
 
 formulario.addEventListener("submit", (evento) => {
   evento.preventDefault();

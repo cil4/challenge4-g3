@@ -73,7 +73,7 @@ const getDiversos = (name, price, imageUrl, id) => {
               <img class="deleteImage" src="../assets/delete.png" alt="Deletar" />
             </button>
             
-            <a href="../screens/editar-diverso.html/${id}">
+            <a href="../screens/editar-diverso.html?id=${id}">
             
               <button class="buttonEdit" type="button">
                 <img class="editImage" src="../assets/edit.png" alt="Editar" />

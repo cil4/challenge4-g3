@@ -90,11 +90,11 @@ const getDiversos = (name, price, imageUrl, id) => {
   return card;
 };
 
-
+const consolas = document.querySelector("[data-allProducts]");
 const productos = document.querySelector("[data-allProducts]");
+const diversos = document.querySelector("[data-allProducts]");
 
-
-productos.addEventListener("click", async (evento) => {
+consolas.addEventListener("click", async (evento) => {
   let deleteButton = evento.target.className === "deleteImage";
   if (deleteButton) {
     const consola = evento.target.closest("[data-id]");
@@ -124,7 +124,7 @@ productos.addEventListener("click", async (evento) => {
   }
 });
 
-productos.addEventListener("click", async (evento) => {
+diversos.addEventListener("click", async (evento) => {
   let deleteButton = evento.target.className === "deleteImage";
   if (deleteButton) {
     const diverso = evento.target.closest("[data-id]");

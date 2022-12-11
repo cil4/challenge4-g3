@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/lista-productos.css">
+    <link rel="stylesheet" href="./styles/products.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet"/>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Alura Geek</title>
   </head>
   <body>
@@ -16,12 +18,18 @@
       <nav>
         <div class="logo-busqueda">
           <div class="logo">
-            <img src="./assets/logo.png" alt="logo" />
+            <a href="#"><img src="./assets/logo.png" alt="logo" /></a>
             <p class="logo-azul">Alura</p>
             <p>Geek</p>
           </div>
-          <input  type="text" placeholder="¿Qué deseas buscar?" />
+          <div >
+          <input  type="text" id="search" class="form-control form-control-lg" placeholder="¿Qué deseas buscar?" />
+          </div>
+          <div id="match-list" class="lista">
+
+          </div>
         </div>
+        
         <div class="login">
           <a href="./screens/login.html"><button type="submit">Login</button></a>
         </div>
@@ -36,51 +44,68 @@
       </div>
     </section>
 
-    <section class="geral-prods">
-      <div class="prod-titulo">
-        <div class="titulo">
-          <p>Star Wars</p>
-        </div>
-        <div class="mostrar-mais">
-          <div class="div-verTudo">
-           <a href="./screens/produto.html"> Ver Todo <img class="verTudo" src="./assets/Vector.png" alt="flecha" /></a>
-          </div>
-        </div>
-      </div>
+  <section class="geral-prods">
 
-      <section class="sessao-produtos" data-product>
+            <div class="prod-titulo">
+                <div class="titulo">
+                  <p>Star Wars</p>
+                </div>
+                <div class="mostrar-mais">
+                  <div class="div-verTudo">
+                      <a href="./screens/listaProductos.html"> Ver Todo <img class="verTudo" src="./assets/Vector.png" alt="flecha" /></a>
+                </div>
+                </div>
+            </div>
 
-      </section>
+            <section class="sessao-produtos" data-product>
 
-      <div class="prod-titulo">
-        <div class="titulo">
-          <p>Consolas</p>
-        </div>
-        
-      </div>
-      
-      <section class="sessao-produtos" data-consola>
+            </section>
+    
+    
+            <div class="prod-titulo">
+                <div class="titulo">
+                  <p>Consolas</p>
+                </div>
+                <div class="mostrar-mais">
+                    <div class="div-verTudo">
+                      <a href="./screens/listaConsolas.html"> Ver Todo <img class="verTudo" src="./assets/Vector.png" alt="flecha" /></a>
+                    </div>
+              
+                </div>
+            </div>
+            
+            <section class="sessao-produtos" data-consola>
 
-      </section>
+            </section>
 
-      <div class="prod-titulo">
-        <div class="titulo">
-          <p>Diversos</p>
-        </div>
-       
-      </div>
-      
-      <section class="sessao-produtos" data-diverso>
+            <div class="prod-titulo">
+                <div class="titulo">
+                  <p>Diversos</p>
+                </div>
+                <div class="mostrar-mais">
+                    <div class="div-verTudo">
+                      <a href="./screens/listaDiversos.html"> Ver Todo <img class="verTudo" src="./assets/Vector.png" alt="flecha" /></a>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <section class="sessao-produtos" data-diverso>
 
-      </section>
-    </section>
+            </section>
+
+  </section>
 
     <section class="contato">
+
+     
       <div class="referencia">
+        <div>
         <img src="./assets/logo.png" alt="logo" />
-        <p>Alura</p>
-        <p>Geek</p>
+        <p class="logo-pie logo-pie-alura" >Alura</p>
+        <p class="logo-pie ">Geek</p>
       </div>
+      
       <div class="links-uteis">
         <a href="">Quienes somos</a>
         <a href="">Política de Privacidad</a>
@@ -89,32 +114,60 @@
         <a href="">Quiero ser franquiciado</a>
         <a href="">Anuncie aquí</a>
       </div>
+      </div>
 
       <div class="form">
-        <p>Contáctenos</p>
-        <div class="label-float">
-          <input
-            type="text"
-            name="Nome"
-            id="Nome"
-            class="input-nome"
-            placeholder=""
-          />
-          <label for="Nome" class="label-nome">Nombre</label>
-        </div>
-        <textarea
-          name="mensagem"
-          id="msg"
-          cols="5"
-          rows="5"
-          placeholder="Escriba su mensaje"
-        ></textarea>
-        <button>Enviar Mensaje</button>
-      </div>
+        <form action="https://formspree.io/f/xyyvrngw"
+        method="POST" class="contacto_form" id="contact-form">
+           
+                <p>Contáctenos</p>
+
+                <div class="input-container">
+                <input name="nombre" class="input" type="text" placeholder="Nombre" required data-tipo="nombre" pattern="[\s\S]{4,40}">
+                <label for="nombre" class="label-nome"></label>
+                <span class="input-message-error">Este campo no es válido</span>
+                </div>
+
+
+                <div class="input-container">
+                  <input name="email" id="email" class="input" type="email" placeholder="Email" required data-tipo="email">
+                  <label for="email" ></label>
+                  <span class="input-message-error">Este campo no es válido</span>
+                  </div>
+
+               
+                <div class="input-container">
+                <input name="mensaje" class="input" type="text" placeholder="Escribe tu mensaje" required data-tipo="mensaje" pattern="[\s\S]{30,120}" id="mensaje">
+                <label for="mensaje" ></label>
+                <span class="input-message-error">Este campo no es válido</span>
+
+                </div>
+
+            
+            <button class="boton-msg" >Enviar mensaje</button>
+        </form>
+    </div>
+
+
     </section>
+
+    <section class="footer">
+      <div >
+        <p>Desarrollado por Marianela Cilene Gamarra</p>
+        
+        <p>2022</p>
+    </div>
+
+    </section>
+
+
     <script type="module" src="./controllers/productos-controller.js"></script>
-    <script type="module" src="./controllers/consolas-controller.js"></script>
-    <script type="module" src="./controllers/diversos-controller.js"></script>
+    <script type="module" src="./controllers/busqueda.js"></script>
+   
+    <script type="module" src="./controllers/validacion-form.js"></script>
+    <script type="module" src="./controllers/form.js"></script>
+    
+   
   </body>
 </html>
 

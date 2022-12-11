@@ -11,7 +11,7 @@ const listarUnProduto = (id) => {
 };
 
 //POST
-const creaProdutos = (name, imageUrl, price) => {
+const creaProdutos = (name, imageUrl, price, categoria) => {
   return fetch(`https://challenge4.onrender.com/producto`, {
     method: "POST",
     headers: {
@@ -21,6 +21,7 @@ const creaProdutos = (name, imageUrl, price) => {
       name,
       imageUrl,
       price,
+      categoria
     }),
   }).then((resposta) => {
     if (resposta.ok) {
@@ -31,13 +32,14 @@ const creaProdutos = (name, imageUrl, price) => {
 };
 
 // PUT/PATCH
-const alteraProduto = async (id,imageUrl, name, price, description) => {
+const alteraProduto = async (id,categoria,imageUrl, name, price, description) => {
   return fetch(`https://challenge4.onrender.com/producto/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
+      categoria,
       imageUrl,
       name,
       price,

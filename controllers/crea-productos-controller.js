@@ -5,6 +5,7 @@ const form = document.querySelector("[data-form]");
 form.addEventListener("submit", (evento) => {
   evento.preventDefault();
 
+  
   const nome = document.querySelector("[data-nome]").value;
   const url = document.querySelector("[data-url]").value;
   const preco = document.querySelector("[data-preco]").value;
@@ -13,7 +14,7 @@ form.addEventListener("submit", (evento) => {
   productoServices
     .creaProdutos(nome, url, preco,categ)
     .then((resposta) => {
-      window.location.href = "../index.html";
+      window.location.href = "../screens/produto.html";
       console.log(resposta);
     })
     .catch((err) => {

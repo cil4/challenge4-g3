@@ -7,51 +7,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap"/>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/login.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Alura Geek</title>
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="barra">
         <div class="logo-busqueda">
           <div class="logo">
             <a href="../index.html"><img src="../assets/logo.png" alt="logo" /></a>
             <p class="logo-azul">Alura</p>
             <p>Geek</p>
           </div>
-          <input  type="text" placeholder="¿Qué deseas buscar?" />
+          <div class="form-group">
+            <input  type="text" id="search" class="form-control form-control-lg" placeholder="¿Qué deseas buscar?" />
+            </div>
+            <div id="match-list" class="lista-busqueda">
+  
+            </div>
         </div>
+
       </nav>
     </header>
     <main>
-      <section class="login">
+      <section class="form iniciar">
         <div class="login_title">Iniciar Sesión</div>
         <form action="#" class="form-cadastro" data-form>
-          <input
-            class="login_input__url"
-            type="text"
-            placeholder="Escriba su email"
-            required
-            data-email
-          />
-          <input
-            class="login_input__name"
-            type="password"
-            placeholder="Escriba su contraseña"
-            required
-            data-password
-          />
+        
+          <div class="input-container">
+            <input name="email" id="email" class="input" type="email" placeholder="Ingrese su email" required data-email>
+            <label for="email" ></label>
+            <span class="input-message-error">Este campo no es válido</span>
+            </div>
+
+          <div class="input-container">
+            <input name="password" class="input" type="password" placeholder="Ingrese su contraseña" required data-password pattern="^(?=(?:.*\d){1})(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})(?=(?:.*[@$?¡\-_]){1})\S{8,16}$"   title="Al menos 8 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número, un caracter especial" >
+            <label for="password" class="label-password"></label>
+            <span class="input-message-error">Este campo no es válido</span>
+            </div>
+
           <button type="submit" class="login_btn">Entrar</button>
         </form>
       </section>
     </main>
   </body>
   <section class="contato">
+    
     <div class="referencia">
+      <div>
       <img src="../assets/logo.png" alt="logo" />
-      <p>Alura</p>
-      <p>Geek</p>
+      <p class="logo-pie logo-pie-alura">Alura</p>
+      <p class="logo-pie ">Geek</p>
     </div>
     <div class="links-uteis">
       <a href="">Quienes somos</a>
@@ -61,28 +70,51 @@
       <a href="">Quiero ser franquiciado</a>
       <a href="">Anuncie aquí</a>
     </div>
+    </div>
 
     <div class="form">
-      <p>Contáctenos</p>
-      <div class="label-float">
-        <input
-          type="text"
-          name="Nome"
-          id="Nome"
-          class="input-nome"
-          placeholder=""
-        />
-        <label for="Nome" class="label-nome">Nombre</label>
-      </div>
-      <textarea
-        name="mensagem"
-        id="msg"
-        cols="5"
-        rows="5"
-        placeholder="Escriba su Mensaje"
-      ></textarea>
-      <button>Enviar Mensaje</button>
-    </div>
+      <form action="https://formspree.io/f/xyyvrngw"
+      method="POST" class="contacto_form" id="contact-form">
+          
+              <p>Contáctenos</p>
+
+              <div class="input-container">
+              <input name="nombre" class="input" type="text" placeholder="Nombre" required data-tipo="nombre" pattern="[\s\S]{4,40}">
+              <label for="nombre" class="label-nome"></label>
+              <span class="input-message-error">Este campo no es válido</span>
+              </div>
+
+
+              <div class="input-container">
+                <input name="email" id="email" class="input" type="email" placeholder="Email" required data-tipo="email">
+                <label for="email" ></label>
+                <span class="input-message-error">Este campo no es válido</span>
+                </div>
+
+             
+              <div class="input-container">
+              <input name="mensaje" class="input" type="text" placeholder="Escribe tu mensaje" required data-tipo="mensaje" pattern="[\s\S]{5,120}" id="mensaje">
+              <label for="mensaje" ></label>
+              <span class="input-message-error">Este campo no es válido</span>
+
+              </div>
+
+          
+          <button class="boton-msg">Enviar mensaje</button>
+      </form>
+  </div>
   </section>
+  <section class="footer">
+    <div >
+      <p>Desarrollado por Marianela Cilene Gamarra</p>
+      
+      <p>2022</p>
+  </div>
+
+  </section>
+  
   <script type="module" src="../controllers/login-controller.js"></script>
+  <script type="module" src="../controllers/busqueda.js"></script>
+  <script type="module" src="../controllers/validacion-form.js"></script>
+  <script type="module" src="../controllers/form.js"></script>
 </html>

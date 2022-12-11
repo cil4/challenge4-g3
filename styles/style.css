@@ -1,17 +1,21 @@
 /*---------------Variaveis---------------*/
 
 :root {
-  --bg-color: #ebebeb;
-  --input-placeholder: #d4d4d4;
+  /*--bg-color: #ebebeb;*/
+  /*--input-placeholder: #d4d4d4;*/
   --input-bg: #efefef;
   --texto-destaque: #ffff;
   --azul-destaque: #2a7ae4;
   --bg-contato: #eaf2fd;
+  --warning-color: #df2525;
+
   font-family: "Raleway", sans-serif;
 }
 
 /*---------------Normaliza - Reset-CSS---------------*/
-
+* {
+  outline: 1px solid red;
+}
 body {
   margin: 0;
   padding: 0;
@@ -19,6 +23,7 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: var(--bg-color);
   scroll-behavior: smooth;
+
 }
 
 /*---------------Padrão de projeto---------------*/
@@ -71,6 +76,7 @@ nav {
 .logo {
   display: flex;
   align-items: center;
+  color: #464646;
 }
 
 .logo img {
@@ -114,7 +120,8 @@ nav {
   background: none;
   border: solid 1px var(--azul-destaque);
   color: var(--azul-destaque);
-  text-transform: uppercase;
+  letter-spacing: .15rem;
+  font-size: 16px;
 }
 
 .login button:hover {
@@ -127,15 +134,21 @@ nav {
 .contato {
   background-color: var(--bg-contato);
   display: flex;
-  height: 365px;
+
   justify-content: center;
-  padding: 64px 0;
+  padding: 24px 0;
+  color: #464646;
+  align-items: baseline;
+  gap: 10%;
 }
 
 .referencia {
   display: flex;
-  width: 350px;
-  margin: 20px 0 0 0;
+  width: 550px;
+  margin: 8% 0 0 0;
+padding: 1em 0 0 6em;
+gap: 12px;
+align-items: baseline;
 }
 
 .referencia img {
@@ -143,17 +156,21 @@ nav {
   height: 40px;
 }
 
+
 .img-crud {
   width: 250px;
   height: 200px;
 }
 
-.referencia p {
+.logo-pie {
   font-size: 26px;
   font-weight: bolder;
-  color: var(--azul-destaque);
+  
   margin-top: 5px;
-  margin-left: 6px;
+  
+}
+.logo-pie-alura{
+  color: var(--azul-destaque);
 }
 
 .links-uteis {
@@ -165,7 +182,8 @@ nav {
 }
 
 .links-uteis a {
-  color: black;
+  color: #464646;
+  
   font-weight: normal;
 }
 
@@ -174,10 +192,13 @@ nav {
   flex-direction: column;
   position: relative;
   width: 500px;
+  top: -1em;
 }
 
 .form p {
   font-weight: bolder;
+  color: #464646;
+  font-size: 20px;
 }
 
 .form input {
@@ -185,10 +206,11 @@ nav {
   position: relative;
   height: 56px;
   border: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   box-sizing: content-box;
   padding: 0.5% 2.7%;
-  color: var(--azul-destaque);
+  color: #464646;
+  font-size: 16px;
 }
 
 .form input:hover {
@@ -199,7 +221,7 @@ nav {
 .label-nome {
   width: 100%;
   position: absolute;
-  color: var(--input-placeholder);
+  color: #464646;
   top: 80px;
   left: 9px;
   transition: 0.5s;
@@ -213,20 +235,100 @@ nav {
   color: var(--azul-destaque);
 }
 
-.form textarea {
-  width: 100%;
-  font-family: "Raleway", sans-serif;
-  border: transparent;
-  color: var(--azul-destaque);
-  margin-bottom: 20px;
-}
 
-.form button {
+.boton-msg {
   background-color: var(--azul-destaque);
   border: none;
   color: var(--texto-destaque);
   height: 51px;
   width: 180px;
+  font-size: 15px;
+	letter-spacing: .1rem;
 }
 
+/* */
+.input-container--invalid {
+  margin-bottom: 0.5rem;
+}
+
+.input-container--invalid .input {
+  border: 1px solid var(--warning-color);
+  border-radius: 7px;
+}
+
+.input-container--invalid .input-label {
+  color: var(--warning-color);
+}
+
+.input-message-error {
+  display: none;
+}
+
+.input-container--invalid .input-message-error {
+  color: var(--warning-color);
+  display: block;
+  margin-top: 0.3rem;
+  padding-left: 0.5rem;
+}
+
+.referencia > div{
+  display: flex;
+  
+}
+/* footer */
+.footer{
+  text-align: center;
+  background-color: var(--texto-destaque);
+  margin-top: 1.5em;
+  
+}
+
+
+/*busqueda*/
+.lista{
+  position: absolute;
+  top: 20vh;
+  left: 22.5vw;
+  width: 393px;
+  
+ 
+ 
+}
+
+.card{
+  background-color: #efefefd7;
+  padding-left: 1.5em;
+  
+
+ 
+}
+@media (max-width:768px){
+  .logo{
+		padding: 0 2em;
+	}
+	
+	.logo-busqueda input{
+    width: 275px;
+    margin: 0;
+	}
+  .login button{
+    width: 120px;
+    margin-right: 1.5em;
+  }
+  .contato{
+    gap: 1%;
+  }
+  .referencia{
+    align-items:unset;
+    flex-direction: column;
+    width: 35%;
+    padding: 1em 0 1em 1.5em;
+  }
+  .form{
+    width: 65%;
+  }
+  .form input{
+		width: 90%;
+	}
+}
 

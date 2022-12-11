@@ -18,9 +18,9 @@
 
   .banner h1 {
 	color: var(--texto-destaque);
-	font-size: 52px;
-	font-weight: bold;
-	text-shadow: 2px 2px 0px #323131, 5px 4px 0px rgb(0 0 0 / 15%);
+	font-size: 55px;
+	font-weight: bolder;
+	text-shadow: 2px 2px 0px #323131, 5px 4px 0px rgb(0 0 0 / 15%); 
   }
 
   .banner h4 {
@@ -34,6 +34,8 @@
 	background-color: var(--azul-destaque);
 	border: none;
 	color: var(--texto-destaque);
+	font-size: 15px;
+	letter-spacing: .1rem;
 	height: 51px;
 	width: 130px;
   }
@@ -49,14 +51,11 @@
 
   .sessao-produtos {
 	height: 100%;
-padding: 0px 150px 0px 150px;
-display: flex;
-justify-content: space-around;
-flex-wrap: wrap;
-gap: 5px;
-flex-direction: row;
-align-content: flex-start;
-align-items: flex-start;
+	padding: 0px 150px 0px 150px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 10px;
   }
 
   .prod-titulo {
@@ -123,3 +122,57 @@ align-items: flex-start;
   p {
 	margin: 8px 0px 8px 0px;
   }
+
+
+
+  /*768px*/
+  @media (max-width:768px){
+	.prod-titulo{
+		padding: 0;
+	}
+	.prod-titulo .titulo{
+		font-size: 28px;
+	}
+	.sessao-produtos{
+		padding: 0 25px;
+	}
+	.sessao-produtos >div:nth-child(n+5){
+		
+		display: none;
+
+	}
+	.destaque{
+		width: 96%;
+		
+		padding: 0 8px 0 20px;
+		background-size: cover;
+		overflow-x: hidden;
+		
+		
+	}
+
+	.banner h1{
+		font-size: 45px;
+	}
+	.banner h4{
+		font-size: 20px;
+	}
+	.banner{
+		padding-left: 0;
+		padding-right: 20px;
+		width: 80%;
+		
+	}
+	h1 p{
+		margin: 0;
+	}
+	
+  } 
+  @media(max-width:425px){
+	.sessao-produtos >div:nth-child(n+3){
+		background-color: red;
+		display: none;
+
+	}
+  }
+

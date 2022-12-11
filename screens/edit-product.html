@@ -15,6 +15,7 @@
     />
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/edit-product.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Alura Geek</title>
   </head>
   <body>
@@ -26,29 +27,43 @@
             <p class="logo-azul">Alura</p>
             <p>Geek</p>
           </div>
-          <input  type="text" placeholder="¿Qué deseas buscar?" />
+          <div class="form-group">
+            <input  type="text" id="search" class="form-control form-control-lg" placeholder="¿Qué deseas buscar?" />
+            </div>
+            <div id="match-list">
+  
+            </div>
         </div>
       </nav>
     </header>
     <section class="geral-products">
       <div class="products_title">Editar producto</div>
-      <section class="products-section" data-allProducts>
+      <section class="products-section" >
         <form action="#" class="form-control" data-form>
           <img src="" data-url />
        
-         
+          <select
+          name="Categoría"
+          required data-producto
+          
+        >
+        <option value="diverso" >Diversos</option>
+        <option value="consola" >Consolas</option>
+        <option value="producto" >Productos</option>
+
+      </select>
 
           <input
             class="product-add_input__name"
             type="text"
             placeholder="Nombre del producto"
-            data-nombre
+            data-nome
           />
           <input
             class="product-add_input__price"
             type="text"
             placeholder="Precio del producto"
-            data-precio
+            data-preco
           />
           <textarea
             class="product-add_textarea__description"
@@ -79,30 +94,52 @@
     </div>
 
     <div class="form">
-      <p>Hable con nosotros</p>
-      <div class="label-float">
-        <input
-          type="text"
-          name="Nome"
-          id="Nome"
-          class="input-nome"
-          placeholder="Nombre"
-        />
-        <label for="Nome" class="label-nome">Nombre</label>
-      </div>
-      <textarea
-        name="mensagem"
-        id="msg"
-        cols="5"
-        rows="5"
-        placeholder="Escriba su Mensaje"
-      ></textarea>
-      <button>Enviar Mensaje</button>
-    </div>
+      <form action="https://formspree.io/f/xyyvrngw"
+      method="POST" class="contacto_form" id="contact-form">
+          <fieldset>
+              <legend class="title_contacto">Contáctenos</legend>
+
+              <div class="input-container">
+              <input name="nombre" class="input" type="text" placeholder="Nombre" required data-tipo="nombre" pattern="[\s\S]{4,40}">
+              <label for="nombre" class="label-nome"></label>
+              <span class="input-message-error">Este campo no es válido</span>
+              </div>
+
+
+              <div class="input-container">
+                <input name="email" id="email" class="input" type="email" placeholder="Email" required data-tipo="email">
+                <label for="email" ></label>
+                <span class="input-message-error">Este campo no es válido</span>
+                </div>
+
+             
+              <div class="input-container">
+              <input name="mensaje" class="input" type="text" placeholder="Escribe tu mensaje" required data-tipo="mensaje" pattern="[\s\S]{5,120}" id="mensaje">
+              <label for="mensaje" ></label>
+              <span class="input-message-error">Este campo no es válido</span>
+
+              </div>
+
+          </fieldset>
+          <button class="btn_contacto">Enviar mensaje</button>
+      </form>
+  </div>
   </section>
+  <section class="footer">
+    <div >
+      <p>Desarrollado por Marianela Cilene Gamarra</p>
+      
+      <p>2022</p>
+  </div>
+
+  </section>
+  
   <script
     type="module"
     src="../controllers/actualiza-producto-controller.js"
   ></script>
+  <script type="module" src="../controllers/busqueda.js"></script>
+  <script type="module" src="../controllers/validacion-form.js"></script>
+    <script type="module" src="../controllers/form.js"></script>
  
 </html>

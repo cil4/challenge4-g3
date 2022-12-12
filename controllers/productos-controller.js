@@ -33,7 +33,7 @@ let contadorDiv = 0;
 
 productoServices.listaProductos().then((data)=>{
   data.forEach(({imageUrl, categoria, name, price,id})=>{
-    if (screen.width > 768) {
+    //if (screen.width > 768) {
       if (categoria === categoria1 && contadorProd < 6) {
         const nuevaLinea = nuevoProduto(name, price,imageUrl,categoria,id);
         productos.appendChild(nuevaLinea);
@@ -49,7 +49,8 @@ productoServices.listaProductos().then((data)=>{
     diversos.appendChild(nuevaLinea);
     contadorDiv++;
   };
-} else if (screen.width <= 768) {
+//}
+ /*else if (screen.width <= 768) {
   if (categoria === categoria1 && contadorProd < 4) {
     const nuevaLinea = nuevoProduto(imageUrl, categoria, price, name, id);
     productos.appendChild(nuevaLinea);
@@ -60,17 +61,18 @@ productoServices.listaProductos().then((data)=>{
     consolas.appendChild(nuevaLinea);
     contadorCons++;
   }
-  if (categoria === categoria3 && contadorDiv < 4) {
+  if (categoria === categoria3 && contadorDiv < 3) {
     const nuevaLinea = nuevoProduto(imageUrl, categoria, name, price, id);
     diversos.appendChild(nuevaLinea);
     contadorDiv++;
   }
-}
-});
-
+//}
+}); */
+  })
 }).catch((err) => {
   console.log(err);
 });
+
 
 
       

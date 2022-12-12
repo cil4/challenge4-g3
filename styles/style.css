@@ -298,10 +298,21 @@ align-items: baseline;
 .card{
   background-color: #efefefd7;
   padding-left: 1.5em;
-  
+  padding-bottom: .5em;
+  padding-top: .5em;
+} 
 
- 
-}
+ .card:hover{
+  background-color: #beb3b3;
+  
+ }
+ .card > a:hover{
+  color: #f3ecec;
+ }
+ .lupa{
+  display: none;
+ }
+
 @media (max-width:768px){
   .logo{
 		padding: 0 2em;
@@ -330,5 +341,66 @@ align-items: baseline;
   .form input{
 		width: 90%;
 	}
+  .lista{
+    top: 12.7vh;
+left: 36vw;
+width: 275px;
+  }
+  .lupa{
+    display: none;
+   }
+}
+
+@media (max-width:425px){
+
+  .logo-busqueda input{
+    display: none;
+  }
+  .lupa{
+    display: block;
+   
+   }
+   .lupa > img{
+    width: 25px;
+    height: 27.5px;
+    cursor: pointer;
+    margin-right: 2%;
+   }
+  .logo{
+    padding: 0;
+  }
+  .logo p{
+    font-size: 20px;
+  }
+  .login{
+    width: auto;
+  }
+  .login button{
+    height: 37.5px;
+    width: 100px;
+    margin-right: 2.5em;
+  }
+  .contato{
+    flex-direction: column;
+    gap: 12px;
+  }
+  .referencia{
+    margin: 0 25%;
+  }
+  .referencia > div{
+    text-align: center;
+  }
+  .form{
+    margin: 0 auto;
+  }
+  .form p{
+    text-align: center;
+  }
+  header{
+    padding: 30px 25px 30px 20px;
+  }
+  .boton-msg{
+    margin: 0 16%;
+  }
 }
 

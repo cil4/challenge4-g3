@@ -75,7 +75,13 @@ main {
   z-index: 1;
 }
 
-
+@media (max-width:768px){
+.lista-busqueda{
+top: 16vh;
+width: 275px;
+left: 54vw;
+}
+}
 /* .top_menu {
   display: flex;
   flex-direction: row;

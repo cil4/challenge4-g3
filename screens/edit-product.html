@@ -13,6 +13,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet"/>
+
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/edit-product.css" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -23,16 +25,22 @@
       <nav>
         <div class="logo-busqueda">
           <div class="logo">
-            <img src="../assets/logo.png" alt="logo" />
+            <a href="../index.html"><img src="../assets/logo.png" alt="logo" /></a>
             <p class="logo-azul">Alura</p>
             <p>Geek</p>
           </div>
           <div class="form-group">
             <input  type="text" id="search" class="form-control form-control-lg" placeholder="¿Qué deseas buscar?" />
             </div>
-            <div id="match-list">
+            <div id="match-list" class="lista-busqueda">
   
             </div>
+        </div>
+        <div class="login">
+          <a href="../screens/login.html"><button type="submit">Login</button></a>
+        </div>
+        <div class="lupa">
+          <img src="../assets/lupa-negro.png" alt="logo" /></a>
         </div>
       </nav>
     </header>
@@ -42,14 +50,14 @@
         <form action="#" class="form-control" data-form>
           <img src="" data-url />
        
-          <select
+          <select class="categ"
           name="Categoría"
           required data-producto
           
         >
-        <option value="diverso" >Diversos</option>
-        <option value="consola" >Consolas</option>
-        <option value="producto" >Productos</option>
+        <option value="diverso" >Categoría: Diversos</option>
+        <option value="consola" >Categoría: Consolas</option>
+        <option value="producto" >Categoría: Productos</option>
 
       </select>
 
@@ -80,9 +88,10 @@
   </body>
   <section class="contato">
     <div class="referencia">
+      <div>
       <img src="../assets/logo.png" alt="logo" />
-      <p>Alura</p>
-      <p>Geek</p>
+      <p class="logo-pie logo-pie-alura">Alura</p>
+      <p class="logo-pie ">Geek</p>
     </div>
     <div class="links-uteis">
       <a href="">Quienes somos</a>
@@ -92,12 +101,12 @@
       <a href="">Quiero ser franquiciado</a>
       <a href="">Anuncie aquí</a>
     </div>
-
+    </div>
     <div class="form">
       <form action="https://formspree.io/f/xyyvrngw"
       method="POST" class="contacto_form" id="contact-form">
-          <fieldset>
-              <legend class="title_contacto">Contáctenos</legend>
+         
+              <p>Contáctenos</p>
 
               <div class="input-container">
               <input name="nombre" class="input" type="text" placeholder="Nombre" required data-tipo="nombre" pattern="[\s\S]{4,40}">
@@ -120,8 +129,8 @@
 
               </div>
 
-          </fieldset>
-          <button class="btn_contacto">Enviar mensaje</button>
+          
+          <button class="boton-msg">Enviar mensaje</button>
       </form>
   </div>
   </section>

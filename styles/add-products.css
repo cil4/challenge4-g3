@@ -186,3 +186,37 @@ border-bottom: solid 2px var(--azul-destaque);
     display: none;
 }
 
+
+    .lista-busqueda{
+        position: absolute;
+        top: 22vh;
+width: 375px;
+left: 28.5vw;
+      }
+
+     
+
+
+      @media (max-width:768px){
+        .barra-izq{
+            margin-left: 0;
+        }
+        .lista-busqueda{
+            top: 15.7vh;
+width: 280px;
+left: 36vw;
+        }
+      }
+
+      @media(max-width:425px){
+        .product-add_input__url, .product-add_input__name, .product-add_input__price, .product-add_textarea__description {
+            width: 65%;
+      }
+      .product-add_input_categ{
+        width: 68%;
+      }
+      .product-add_btn{
+      width: 68%;
+height: 45px;
+      }
+    }

@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet"/>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <title>Alura Geek</title>
   </head>
   <body>
@@ -22,6 +23,7 @@
             <p class="logo-azul">Alura</p>
             <p>Geek</p>
           </div>
+
           <div >
           <input  type="text" id="search" class="form-control form-control-lg" placeholder="¿Qué deseas buscar?" />
           </div>
@@ -34,9 +36,32 @@
         <div class="login">
           <a href="./screens/login.html"><button type="submit">Login</button></a>
         </div>
-        <div class="lupa">
-          <img src="./assets/lupa-negro.png" alt="logo" /></a>
-        </div>
+       
+        
+          <div class="search">
+                  <span class="icon">
+                    <i class="bi bi-search" ></i>
+                    <i class="bi bi-x-circle"></i>
+                  </span>
+            
+            
+           
+          
+          
+          
+                  <div class="searchBox">
+                          <div>
+                          <input  type="text" id="buscar"  placeholder="¿Qué deseas buscar?" />
+                          </div>
+                  
+                          <div id="lista" class="searchBar">
+                  
+                  
+                          </div>
+                    </div>
+
+          </div>
+
       </nav>
     </header>
 
@@ -167,6 +192,7 @@
 
     <script type="module" src="./controllers/productos-controller.js"></script>
     <script type="module" src="./controllers/busqueda.js"></script>
+    <script type="module" src="./controllers/lupa.js"></script>
    
     <script type="module" src="./controllers/validacion-form.js"></script>
     <script type="module" src="./controllers/form.js"></script>

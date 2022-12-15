@@ -13,9 +13,7 @@
 }
 
 /*---------------Normaliza - Reset-CSS---------------*/
-* {
-  outline: 1px solid red;
-}
+
 body {
   margin: 0;
   padding: 0;
@@ -23,6 +21,8 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: var(--bg-color);
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
 
 }
 
@@ -287,7 +287,7 @@ align-items: baseline;
 /*busqueda*/
 .lista{
   position: absolute;
-  top: 20vh;
+  top: 12.5vh;
   left: 22.5vw;
   width: 393px;
   
@@ -311,6 +311,9 @@ align-items: baseline;
  }
  .lupa{
   display: none;
+ }
+ .search, .searchBox, .searchBar{
+  display:none;
  }
 
 @media (max-width:768px){
@@ -401,6 +404,69 @@ width: 275px;
   }
   .boton-msg{
     margin: 0 16%;
+  }
+  
+  nav .search{
+    
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    justify-content: space-evenly;
+    cursor: pointer;
+    
+  }
+  nav .icon{
+    
+    display: flex;
+    flex-direction: row;
+    
+    
+  }
+  .searchBox{
+    display: none;
+    position: absolute;
+    right: -100%;
+    
+    width: 75.5%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    margin: 0 85px;
+    transition: 0.5s ease-in-out;
+    background-color: #ffff;
+    
+  }
+  .searchBox.active{
+    display: block;
+    right: 0;
+  }
+  .searchBox input{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: .9em;
+    border-bottom: 1px solid rgba(0,0,0, 0.5);
+    color: #464646;
+    margin: 25px 0;
+  }
+  .bi-x-circle{
+    visibility: hidden;
+  }
+  .bi-x-circle.active{
+    visibility: visible;
+  }
+  
+  .searchBar{
+    display: block;
+    position: absolute;
+    top: 11.5vh;
+    left: 5.5vw;
+    width: 65vw;
+   
+    z-index: 2;
   }
 }
 

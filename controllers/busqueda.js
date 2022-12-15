@@ -21,7 +21,7 @@ const outputHtml = matches =>{
     const html  = matches.map(match=>`
     <div class="card card-body">
      
-      <a class="ver-produto" href="./screens/detalle-producto.html?id=${match.id}">${match.name} - (${match.categoria})</a>
+      <a class="ver-produto" href="/screens/detalle-producto.html?id=${match.id}">${match.name} - (${match.categoria})</a>
       
     </div>
     `

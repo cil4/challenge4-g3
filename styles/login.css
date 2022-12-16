@@ -82,6 +82,12 @@ width: 275px;
 left: 54vw;
 }
 }
+@media (max-width:425px){
+  .login_btn{
+    width: 52vw;
+height: 50px;
+  }
+}
 /* .top_menu {
   display: flex;
   flex-direction: row;

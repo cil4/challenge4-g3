@@ -380,6 +380,11 @@ width: 275px;
   }
   .referencia{
     margin: 0 25%;
+    align-items: center;
+  }
+  .links-uteis{
+    align-items: center;
+    margin-right: 0;
   }
   .referencia > div{
     text-align: center;

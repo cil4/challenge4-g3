@@ -1,3 +1,6 @@
+
+document.getElementById("busqueda").style.display = "none";
+
 let searchBtn = document.querySelector(".bi-search");
 let closeBtn = document.querySelector(".bi-x-circle");
 let searchBox = document.querySelector(".searchBox");
@@ -5,16 +8,16 @@ let searchBox = document.querySelector(".searchBox");
 
 
 searchBtn.onclick = function(){
-
+  document.getElementById("busqueda").style.display = "block";
     searchBox.classList.add('active');
     closeBtn.classList.add('active');
-    searchBox.classList.add('active');
+    searchBtn.classList.add('active');
    
 }
 
 
 closeBtn.onclick = function(){
-
+  document.getElementById("busqueda").style.display = "none";
     searchBox.classList.remove('active');
     closeBtn.classList.remove('active');
     searchBtn.classList.remove('active');

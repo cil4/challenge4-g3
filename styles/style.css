@@ -359,16 +359,7 @@ width: 275px;
   .logo-busqueda input{
     display: none;
   }
-  .lupa{
-    display: block;
-   
-   }
-   .lupa > img{
-    width: 25px;
-    height: 27.5px;
-    cursor: pointer;
-    margin-right: 2%;
-   }
+  
   .logo{
     padding: 0;
   }
@@ -425,7 +416,7 @@ width: 275px;
     
   }
   .searchBox{
-    display: none;
+   
     position: absolute;
     right: -100%;
     
@@ -439,7 +430,7 @@ width: 275px;
     
   }
   .searchBox.active{
-    display: block;
+    
     right: 0;
   }
   .searchBox input{
